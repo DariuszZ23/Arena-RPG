@@ -77,7 +77,7 @@ class Player(BaseCharacter):
 
 class Enemy(BaseCharacter):
     def __init__(self, name):
-        super().__init__(name, hp=80, attack=15, defense=3)
+        super().__init__(name, hp=80, attack=15, defense=9)
         self.abilities = [Attack(), Heal()]
 
     def take_turn(self, opponent):
