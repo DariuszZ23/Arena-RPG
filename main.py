@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class Game:
     def __init__(self):
-        self.player = Player("Hero")
+        self.player = Player("Knight")
         self.enemy = Enemy("Goblin")
         self.battle = BattleSystem(self.player, self.enemy)
 
@@ -56,36 +56,49 @@ class Heal(Ability):
     def __init__(self):
         super().__init__("Heal")
 
-    def use(self, caster, target=None):
-        caster.heal(10)
-        return f"{caster.name} heals 10 HP!"
+    def use(self, caster, target):
+        target.heal(10)
+        return f"{caster.name} restores 10 HP!"
 
 class Player(BaseCharacter):
     def __init__(self, name):
-        super().__init__(name, hp=100, attack=20, defense=5)
+        super().__init__(name, hp=90, attack=20, defense=5)
         self.abilities = [Attack(), Heal()]
+
+    def show_status(self, opponent):
+        print(f"{self.name} HP: {self.hp}/{self.max_hp}")
+        print(f"{opponent.name} HP: {opponent.hp}/{opponent.max_hp}")
 
     def take_turn(self, opponent):
         print("\nYour turn:")
+        self.show_status(opponent)
         for i, ability in enumerate(self.abilities):
             print(f"{i+1}. {ability.name}")
 
-        choice = int(input("Choose action: ")) - 1
-        ability = self.abilities[choice]
+        while True:
+            choice = input("Choose action: ")
 
-        return ability.use(self, opponent)
+            if choice.isdigit():
+                idx = int(choice) - 1
+                if 0 <= idx < len(self.abilities):
+                    return self.abilities[idx].use(self, opponent)
+
+            print("Invalid input")
 
 class Enemy(BaseCharacter):
     def __init__(self, name):
-        super().__init__(name, hp=80, attack=15, defense=9)
+        super().__init__(name, hp=80, attack=37, defense=2)
         self.abilities = [Attack(), Heal()]
+        self.heal_used = False
 
     def take_turn(self, opponent):
-        # proste AI
-        if self.hp < 30:
-            ability = self.abilities[1]  # heal
+        LOW_HP_THRESHOLD = 0.3
+
+        if self.hp < self.max_hp * LOW_HP_THRESHOLD and not self.heal_used:
+            ability = self.abilities[1]
+            self.heal_used = True
         else:
-            ability = random.choice(self.abilities)
+            ability = self.abilities[0]
 
         return ability.use(self, opponent)
 
