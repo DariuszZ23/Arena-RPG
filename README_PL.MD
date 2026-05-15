@@ -27,6 +27,7 @@ HP      	90
 Attack	        20
 Defense	        5
 ```
+---
 # Umiejętności:
 * Attack — zadaje obrażenia przeciwnikowi
 * Heal — odnawia 10 HP
@@ -37,10 +38,12 @@ HP      	80
 Attack	        37
 Defense	        2
 ```
-Zachowanie AI:
-przeciwnik atakuje automatycznie,
-używa leczenia tylko raz,
-leczy się przy HP poniżej 30%.
+---
+## Zachowanie AI:
+* przeciwnik atakuje automatycznie,
+* używa leczenia tylko raz,
+* leczy się przy HP poniżej 30%.
+---
 ## 🧩 System obrażeń
 
 Obrażenia obliczane są według wzoru:
@@ -48,7 +51,8 @@ Obrażenia obliczane są według wzoru:
 damage=max(0, attack−defense+random(−2,5))
 
 Dzięki temu każda walka posiada element losowości.
-
+---
+---
 🏗️ Architektura projektu
 Główne klasy
 Game
@@ -96,16 +100,22 @@ Obsługuje:
 przebieg walki,
 kolejność tur,
 sprawdzanie zwycięzcy.
+---
 📂 Struktura projektu
+```
 arena-rpg/
 │
 ├── main.py
 └── README.md
+```
+---
 🚀 Uruchomienie projektu
 Wymagania
 Python 3.x
+---
 Start gry
 python main.py
+---
 🎮 Przykładowa rozgrywka
 === Arena RPG ===
 
@@ -120,6 +130,7 @@ Choose action: 1
 
 Knight deals 21 damage!
 Goblin deals 34 damage!
+---
 🧠 Zastosowane koncepty programistyczne
 
 Projekt wykorzystuje:
@@ -130,3 +141,4 @@ Polimorfizm
 Klasy abstrakcyjne (ABC)
 Enkapsulację
 Podział odpowiedzialności klas
+---
