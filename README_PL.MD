@@ -53,7 +53,7 @@ damage=max(0, attack−defense+random(−2,5))
 Dzięki temu każda walka posiada element losowości.
 ---
 ---
-🏗️ Architektura projektu
+## 🏗️ Architektura projektu
 Główne klasy
 Game
 
@@ -101,7 +101,7 @@ przebieg walki,
 kolejność tur,
 sprawdzanie zwycięzcy.
 ---
-📂 Struktura projektu
+## 📂 Struktura projektu
 ```
 arena-rpg/
 │
@@ -109,14 +109,15 @@ arena-rpg/
 └── README.md
 ```
 ---
-🚀 Uruchomienie projektu
+## 🚀 Uruchomienie projektu
 Wymagania
 Python 3.x
 ---
 Start gry
 python main.py
 ---
-🎮 Przykładowa rozgrywka
+## 🎮 Przykładowa rozgrywka
+```
 === Arena RPG ===
 
 Your turn:
@@ -130,8 +131,9 @@ Choose action: 1
 
 Knight deals 21 damage!
 Goblin deals 34 damage!
+```
 ---
-🧠 Zastosowane koncepty programistyczne
+## 🧠 Zastosowane koncepty programistyczne
 
 Projekt wykorzystuje:
 
