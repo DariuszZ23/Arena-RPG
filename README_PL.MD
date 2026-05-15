@@ -54,22 +54,23 @@ Dzięki temu każda walka posiada element losowości.
 ---
 ---
 ## 🏗️ Architektura projektu
-Główne klasy
-Game
+# Główne klasy
+
+1. Game
 
 Odpowiada za uruchomienie gry i inicjalizację systemu walki.
 
-BaseCharacter
+2. BaseCharacter
 
 Abstrakcyjna klasa bazowa dla wszystkich postaci.
 
 Zawiera:
 
-HP,
-attack,
-defense,
-system obrażeń i leczenia.
-Player
+* HP,
+* attack,
+* defense,
+* system obrażeń i leczenia.
+3. Player
 
 Klasa sterowana przez użytkownika.
 
