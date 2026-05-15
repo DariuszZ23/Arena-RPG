@@ -1,87 +1,132 @@
-🏟️ Arena RPG (Python CLI)
+# 🏟️ Arena RPG
 
-Prosta gra RPG w trybie tekstowym napisana w Pythonie, oparta na systemie walki turowej. Gracz kontroluje postać rycerza i walczy przeciwko przeciwnikowi sterowanemu przez AI.
+Prosta tekstowa gra RPG napisana w Pythonie z wykorzystaniem programowania obiektowego (OOP).
+Gracz wciela się w rycerza walczącego na arenie przeciwko goblinowi sterowanemu przez prostą sztuczną inteligencję.
+---
+## 📖 Opis projektu
 
-📖 Opis
+Projekt przedstawia prosty system walki turowej, w którym:
 
-Arena RPG to konsolowa gra, w której gracz podejmuje decyzje w każdej turze walki. System wykorzystuje programowanie obiektowe (OOP) oraz klasy abstrakcyjne do definiowania postaci i umiejętności.
+* gracz wybiera akcję w każdej turze,
+* przeciwnik wykonuje ruch automatycznie,
+* postacie posiadają statystyki i umiejętności,
+* obrażenia zawierają element losowości.
 
-Projekt demonstruje:
+Kod wykorzystuje:
 
-dziedziczenie i abstrakcję (ABC)
-system umiejętności (abilities)
-prostą sztuczną inteligencję przeciwnika
-losowość w obrażeniach
-⚔️ Mechanika gry
-🧙 Postacie
-Gracz (Player)
-Klasa: Knight
-HP: 90
-Atak: 20
-Obrona: 5
-Umiejętności:
-Attack – zadaje obrażenia
-Heal – leczy 10 HP
-Przeciwnik (Enemy)
-Klasa: Goblin
-HP: 80
-Atak: 37
-Obrona: 2
-AI:
-Używa leczenia tylko raz
-Leczy się, gdy HP spadnie poniżej 30%
-🧩 System walki
-Walka odbywa się w turach:
-Gracz wybiera akcję
-Przeciwnik wykonuje ruch automatycznie
-Obrażenia są obliczane jako:
-damage = attack - defense + losowość (-2 do +5)
-HP nigdy nie spada poniżej 0
-Leczenie nie przekracza maksymalnego HP
-🧠 Architektura
+* klasy abstrakcyjne (ABC),
+* dziedziczenie,
+* polimorfizm,
+* enkapsulację logiki walki.
+---
+# ⚔️ Mechanika gry
+## 👤 Gracz — Knight
+```
+Statystyka	Wartość
+HP      	90
+Attack	        20
+Defense	        5
+```
+# Umiejętności:
+* Attack — zadaje obrażenia przeciwnikowi
+* Heal — odnawia 10 HP
+## 👾 Przeciwnik — Goblin
+```
+Statystyka	Wartość
+HP      	80
+Attack	        37
+Defense	        2
+```
+Zachowanie AI:
+przeciwnik atakuje automatycznie,
+używa leczenia tylko raz,
+leczy się przy HP poniżej 30%.
+## 🧩 System obrażeń
 
-Projekt oparty jest o podejście obiektowe:
+Obrażenia obliczane są według wzoru:
 
-Kluczowe klasy:
-Game – uruchamia grę
-BattleSystem – zarządza walką
-BaseCharacter (abstract)
-wspólne cechy postaci
-Player – sterowany przez użytkownika
-Enemy – prosty AI
-Ability (abstract)
+damage=max(0, attack−defense+random(−2,5))
+
+Dzięki temu każda walka posiada element losowości.
+
+🏗️ Architektura projektu
+Główne klasy
+Game
+
+Odpowiada za uruchomienie gry i inicjalizację systemu walki.
+
+BaseCharacter
+
+Abstrakcyjna klasa bazowa dla wszystkich postaci.
+
+Zawiera:
+
+HP,
+attack,
+defense,
+system obrażeń i leczenia.
+Player
+
+Klasa sterowana przez użytkownika.
+
+Funkcje:
+
+wybór akcji,
+wyświetlanie statusu postaci.
+Enemy
+
+Przeciwnik sterowany przez prostą AI.
+
+Ability
+
+Abstrakcyjna klasa bazowa dla umiejętności.
+
 Attack
+
+Implementuje zadawanie obrażeń.
+
 Heal
+
+Implementuje leczenie postaci.
+
+BattleSystem
+
+Obsługuje:
+
+przebieg walki,
+kolejność tur,
+sprawdzanie zwycięzcy.
 📂 Struktura projektu
 arena-rpg/
 │
-├── main.py   # cały kod gry
+├── main.py
 └── README.md
-🚀 Uruchomienie
+🚀 Uruchomienie projektu
 Wymagania
 Python 3.x
 Start gry
 python main.py
-🎮 Jak grać
-Uruchom grę
-W swojej turze wybierz akcję:
-1 – Attack
-2 – Heal
-Pokonaj przeciwnika zanim on pokona Ciebie
-🤖 AI przeciwnika
+🎮 Przykładowa rozgrywka
+=== Arena RPG ===
 
-Goblin:
+Your turn:
+Knight HP: 90/90
+Goblin HP: 80/80
 
-atakuje w każdej turze
-używa leczenia tylko raz
-robi to automatycznie przy niskim HP
-🔮 Możliwe rozszerzenia
+1. Attack
+2. Heal
 
-Projekt jest dobrą bazą do rozwoju. Możesz dodać:
+Choose action: 1
 
-🧙 więcej klas postaci (Mage, Archer)
-🎒 system ekwipunku
-📈 levelowanie i doświadczenie
-👥 wielu przeciwników
-💥 nowe umiejętności (np. krytyki, buffy)
-🌐 wersję webową (np. Flask / FastAPI)
+Knight deals 21 damage!
+Goblin deals 34 damage!
+🧠 Zastosowane koncepty programistyczne
+
+Projekt wykorzystuje:
+
+Programowanie obiektowe (OOP)
+Dziedziczenie
+Polimorfizm
+Klasy abstrakcyjne (ABC)
+Enkapsulację
+Podział odpowiedzialności klas
