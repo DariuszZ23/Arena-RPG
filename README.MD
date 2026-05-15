@@ -1,9 +1,9 @@
-🏟️ Arena RPG
+# 🏟️ Arena RPG
 
 A simple text-based RPG game written in Python using Object-Oriented Programming (OOP).
 The player controls a knight fighting against a goblin controlled by a simple AI system.
 
-📖 Project Description
+## 📖 Project Description
 
 This project presents a basic turn-based combat system where:
 
@@ -18,8 +18,8 @@ abstract classes (ABC),
 inheritance,
 polymorphism,
 combat system encapsulation.
-⚔️ Game Mechanics
-👤 Player — Knight
+# ⚔️ Game Mechanics
+## 👤 Player — Knight
 Statistic	Value
 HP	90
 Attack	20
@@ -27,7 +27,7 @@ Defense	5
 Abilities:
 Attack — deals damage to the enemy
 Heal — restores 10 HP
-👾 Enemy — Goblin
+## 👾 Enemy — Goblin
 Statistic	Value
 HP	80
 Attack	37
@@ -36,7 +36,7 @@ AI Behavior:
 attacks automatically,
 uses healing only once,
 heals itself when HP drops below 30%.
-🧩 Damage System
+## 🧩 Damage System
 
 Damage is calculated using the following formula:
 
@@ -44,7 +44,7 @@ damage=max(0, attack−defense+random(−2,5))
 
 This adds a small random factor to each attack, making combat less predictable.
 
-🏗️ Project Architecture
+## 🏗️ Project Architecture
 Main Classes
 Game
 
@@ -91,17 +91,17 @@ Handles:
 battle flow,
 turn order,
 win/lose conditions.
-📂 Project Structure
+## 📂 Project Structure
 arena-rpg/
 │
 ├── main.py
 └── README.md
-🚀 Running the Project
+## 🚀 Running the Project
 Requirements
 Python 3.x
 Start the Game
 python main.py
-🎮 Example Gameplay
+## 🎮 Example Gameplay
 === Arena RPG ===
 
 Your turn:
@@ -115,7 +115,7 @@ Choose action: 1
 
 Knight deals 21 damage!
 Goblin deals 34 damage!
-🧠 Programming Concepts Used
+## 🧠 Programming Concepts Used
 
 This project demonstrates:
 
