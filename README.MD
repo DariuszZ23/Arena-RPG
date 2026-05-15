@@ -51,63 +51,71 @@ damage=max(0, attack−defense+random(−2,5))
 This adds a small random factor to each attack, making combat less predictable.
 ---
 ## 🏗️ Project Architecture
-Main Classes
-Game
+# Main Classes
+## Game
 
 Responsible for starting the game and initializing the battle system.
 
-BaseCharacter
+## BaseCharacter
 
 Abstract base class for all characters.
 
 Contains:
 
-HP,
-attack,
-defense,
-damage and healing logic.
-Player
+* HP,
+* attack,
+* defense,
+* damage and healing logic.
+## Player
 
 Class controlled by the user.
 
 Features:
 
-action selection,
-character status display.
-Enemy
+* action selection,
+* character status display.
+## Enemy
 
 Enemy controlled by simple AI logic.
 
-Ability
+## Ability
 
 Abstract base class for abilities.
 
-Attack
+## Attack
 
 Implements the damage-dealing ability.
 
-Heal
+## Heal
 
 Implements healing functionality.
 
-BattleSystem
+## BattleSystem
 
 Handles:
 
-battle flow,
-turn order,
-win/lose conditions.
+* battle flow,
+* turn order,
+* win/lose conditions.
 ## 📂 Project Structure
+```
 arena-rpg/
 │
 ├── main.py
 └── README.md
+```
+---
 ## 🚀 Running the Project
 Requirements
-Python 3.x
-Start the Game
+* Python 3.x
+---
+## Start the Game
+```bash
 python main.py
+```
+---
 ## 🎮 Example Gameplay
+```
 === Arena RPG ===
 
 Your turn:
@@ -121,13 +129,15 @@ Choose action: 1
 
 Knight deals 21 damage!
 Goblin deals 34 damage!
+```
+---
 ## 🧠 Programming Concepts Used
 
 This project demonstrates:
 
-Object-Oriented Programming (OOP)
-Inheritance
-Polymorphism
-Abstract Classes (ABC)
-Encapsulation
-Separation of responsibilities
+* Object-Oriented Programming (OOP)
+* Inheritance
+* Polymorphism
+* Abstract Classes (ABC)
+* Encapsulation
+* Separation of responsibilities

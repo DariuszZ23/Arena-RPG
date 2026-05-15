@@ -56,11 +56,11 @@ Dzięki temu każda walka posiada element losowości.
 ## 🏗️ Architektura projektu
 # Główne klasy
 
-1. Game
+## Game
 
 Odpowiada za uruchomienie gry i inicjalizację systemu walki.
 
-2. BaseCharacter
+## BaseCharacter
 
 Abstrakcyjna klasa bazowa dla wszystkich postaci.
 
@@ -70,37 +70,37 @@ Zawiera:
 * attack,
 * defense,
 * system obrażeń i leczenia.
-3. Player
+## Player
 
 Klasa sterowana przez użytkownika.
 
 Funkcje:
 
-wybór akcji,
-wyświetlanie statusu postaci.
-Enemy
+* wybór akcji,
+* wyświetlanie statusu postaci.
+## Enemy
 
 Przeciwnik sterowany przez prostą AI.
 
-Ability
+## Ability
 
 Abstrakcyjna klasa bazowa dla umiejętności.
 
-Attack
+## Attack
 
 Implementuje zadawanie obrażeń.
 
-Heal
+## Heal
 
 Implementuje leczenie postaci.
 
-BattleSystem
+## BattleSystem
 
 Obsługuje:
 
-przebieg walki,
-kolejność tur,
-sprawdzanie zwycięzcy.
+* przebieg walki,
+* kolejność tur,
+* sprawdzanie zwycięzcy.
 ---
 ## 📂 Struktura projektu
 ```
@@ -112,10 +112,12 @@ arena-rpg/
 ---
 ## 🚀 Uruchomienie projektu
 Wymagania
-Python 3.x
+* Python 3.x
 ---
-Start gry
+## Start gry
+``` bash
 python main.py
+```
 ---
 ## 🎮 Przykładowa rozgrywka
 ```
@@ -138,10 +140,10 @@ Goblin deals 34 damage!
 
 Projekt wykorzystuje:
 
-Programowanie obiektowe (OOP)
-Dziedziczenie
-Polimorfizm
-Klasy abstrakcyjne (ABC)
-Enkapsulację
-Podział odpowiedzialności klas
+* Programowanie obiektowe (OOP)
+* Dziedziczenie
+* Polimorfizm
+* Klasy abstrakcyjne (ABC)
+* Enkapsulację
+* Podział odpowiedzialności klas
 ---
