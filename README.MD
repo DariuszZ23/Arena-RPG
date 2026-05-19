@@ -141,3 +141,7 @@ This project demonstrates:
 * Abstract Classes (ABC)
 * Encapsulation
 * Separation of responsibilities
+---
+## Author
+Dariusz Zerynger
+---

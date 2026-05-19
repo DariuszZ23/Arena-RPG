@@ -147,3 +147,6 @@ Projekt wykorzystuje:
 * Enkapsulację
 * Podział odpowiedzialności klas
 ---
+## Autor
+Dariusz Zerynger
+---
