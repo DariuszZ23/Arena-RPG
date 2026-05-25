@@ -57,11 +57,11 @@ Dzięki temu każda walka posiada element losowości.
 # Główne klasy
 
 ## Game
-
+```
 Odpowiada za uruchomienie gry i inicjalizację systemu walki.
-
+```
 ## BaseCharacter
-
+```
 Abstrakcyjna klasa bazowa dla wszystkich postaci.
 
 Zawiera:
@@ -70,37 +70,40 @@ Zawiera:
 * attack,
 * defense,
 * system obrażeń i leczenia.
+```
 ## Player
-
+```
 Klasa sterowana przez użytkownika.
 
 Funkcje:
 
 * wybór akcji,
 * wyświetlanie statusu postaci.
+```
 ## Enemy
-
+```
 Przeciwnik sterowany przez prostą AI.
-
+```
 ## Ability
-
+```
 Abstrakcyjna klasa bazowa dla umiejętności.
-
+```
 ## Attack
-
+```
 Implementuje zadawanie obrażeń.
-
+```
 ## Heal
-
+```
 Implementuje leczenie postaci.
-
+```
 ## BattleSystem
-
+```
 Obsługuje:
 
 * przebieg walki,
 * kolejność tur,
 * sprawdzanie zwycięzcy.
+```
 ---
 ## 📂 Struktura projektu
 ```

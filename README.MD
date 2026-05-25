@@ -21,6 +21,7 @@ combat system encapsulation.
 ---
 # ⚔️ Game Mechanics
 ## 👤 Player — Knight
+
 ```
 Statistic	Value
 HP	90
@@ -30,13 +31,15 @@ Abilities:
 Attack — deals damage to the enemy
 Heal — restores 10 HP
 ```
+---
 ## 👾 Enemy — Goblin
 ```
 Statistic	Value
-HP	80
+HP	100
 Attack	37
 Defense	2
 ```
+---
 ## AI Behavior:
 attacks automatically,
 uses healing only once,
@@ -49,6 +52,7 @@ Damage is calculated using the following formula:
 damage=max(0, attack−defense+random(−2,5))
 
 This adds a small random factor to each attack, making combat less predictable.
+
 ---
 ## 🏗️ Project Architecture
 # Main Classes

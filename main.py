@@ -87,7 +87,7 @@ class Player(BaseCharacter):
 
 class Enemy(BaseCharacter):
     def __init__(self, name):
-        super().__init__(name, hp=80, attack=37, defense=2)
+        super().__init__(name, hp=100, attack=37, defense=2)
         self.abilities = [Attack(), Heal()]
         self.heal_used = False
 
