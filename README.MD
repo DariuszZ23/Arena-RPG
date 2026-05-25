@@ -57,11 +57,11 @@ This adds a small random factor to each attack, making combat less predictable.
 ## 🏗️ Project Architecture
 # Main Classes
 ## Game
-
+```
 Responsible for starting the game and initializing the battle system.
-
+```
 ## BaseCharacter
-
+```
 Abstract base class for all characters.
 
 Contains:
@@ -70,37 +70,40 @@ Contains:
 * attack,
 * defense,
 * damage and healing logic.
+```
 ## Player
-
+```
 Class controlled by the user.
 
 Features:
 
 * action selection,
 * character status display.
+```
 ## Enemy
-
+```
 Enemy controlled by simple AI logic.
-
+```
 ## Ability
-
+```
 Abstract base class for abilities.
-
+```
 ## Attack
-
+```
 Implements the damage-dealing ability.
-
+```
 ## Heal
-
+```
 Implements healing functionality.
-
+```
 ## BattleSystem
-
+```
 Handles:
 
 * battle flow,
 * turn order,
 * win/lose conditions.
+```
 ## 📂 Project Structure
 ```
 arena-rpg/
